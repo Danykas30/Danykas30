@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danykas | Futuristic Profile</title>
+    <style>
+        :root {
+            --aqua: #00ffff;
+            --blue: #0078d7;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.3);
+            --shadow: 0 8px 32px rgba(0, 120, 215, 0.2);
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo span {
+            color: var(--aqua);
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: var(--glass);
+            text-shadow: 0 0 10px var(--aqua);
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+            gap: 50px;
+        }
+        
+        .profile-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--aqua);
+            margin: 0 auto 20px;
+            box-shadow: 0 0 20px var(--aqua);
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 300;
+            margin: 10px 0;
+        }
+        
+        h2 {
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--aqua);
+            margin: 0 0 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--aqua);
+            transform: translateY(-3px);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--aqua), var(--blue));
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 10px 5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+        }
+        
+        .content {
+            flex: 1;
+        }
+        
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 30px;
+        }
+        
+        .glass-panel h3 {
+            font-size: 24px;
+            font-weight: 300;
+            margin-top: 0;
+            color: var(--aqua);
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill {
+            background: rgba(0, 120, 215, 0.3);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .project {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project h4 {
+            margin: 0 0 10px;
+            font-weight: 400;
+        }
+        
+        .project p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        
+        /* Frutiger Aero elements */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+            z-index: -1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating bubbles for Frutiger Aero effect -->
+    <div class="bubble" style="width: 200px; height: 200px; top: 10%; left: 5%;"></div>
+    <div class="bubble" style="width: 150px; height: 150px; top: 60%; left: 80%;"></div>
+    <div class="bubble" style="width: 100px; height: 100px; top: 30%; left: 70%;"></div>
+    <div class="bubble" style="width: 250px; height: 250px; top: 70%; left: 10%;"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">danykas<span>_</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <div class="profile-card floating">
+                <img src="New Project (2).png" alt="Danykas" class="profile-pic">
+                <h1>Danykas</h1>
+                <h2>I play basketball</h2>
+                <p>Welcome to my profile space.</p>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                
+                <a href="#contact" class="btn">Contact Me</a>
+                <a href="#projects" class="btn" style="background: rgba(255,255,255,0.2);">View Work</a>
+            </div>
+            
+            <div class="content">
+                <div class="glass-panel" id="about">
+                    <h3>About Me</h3>
+                    <p>Hello! I'm Danykas, i have some hobbies with my friends fo the fun of it we create html websites, we use blender software etc.</p>
+                    <p>To create my own profile i took inspiration from the frutiger aero aestetic i play basketball for some fun and im getting better day by day i will keep my journey updated thats it.</p>
+                </div>
+                
+                <div class="glass-panel" id="skills">
+                    <h3>My Skills</h3>
+                    <div class="skills">
+                        <span class="skill">Frontend dev</span>
+                        <span class="skill">Soundtrap creator</span>
+                        <span class="skill">3D animation (not good)</span>
+                        <span class="skill">3D Modeling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="glass-panel" id="projects">
+            <h3>Featured Projects</h3>
+            <div class="projects">
+                <div class="project">
+                    <h4>Channel</h4>
+                    <p>I have created a website for a channel "Vyčio tv" its closed but you can check it <a href="https://vycio-tv.vercel.app">here</a></p>
+                </div>
+                <div class="project">
+                    <h4>Youtube</h4>
+                    <p>I have a yt channel if you want to follow and support <a href="https://youtube.com/@danykassq">here's my youtube</a></p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="glass-panel" id="contact">
+            <h3>Get In Touch</h3>
+            <p>Interested in collaborating or just want to say hello? Feel free to reach out!</p>
+            <form style="margin-top: 20px;">
+                <input type="text" placeholder="Your Name" style="background: rgba(255,255,255,0.2); border: none; border-radius: 20px; padding: 12px 15px; width: 100%; max-width: 400px; margin-bottom: 15px; color: white;">
+                <input type="email" placeholder="Your Email" style="background: rgba(255,255,255,0.2); border: none; border-radius: 20px; padding: 12px 15px; width: 100%; max-width: 400px; margin-bottom: 15px; color: white;">
+                <textarea placeholder="Your Message" style="background: rgba(255,255,255,0.2); border: none; border-radius: 20px; padding: 12px 15px; width: 100%; max-width: 400px; margin-bottom: 15px; color: white; min-height: 100px;"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+        
+        <footer>
+            <p>Ty for visiting my profile</p>
+        </footer>
+    </div>
+    
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
