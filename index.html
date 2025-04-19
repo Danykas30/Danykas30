@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <title>Danykas</title>
     <style>
-    //* Global Reset */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensure padding and borders are included in element dimensions */
+    box-sizing: border-box;
 }
 
 html, body {
@@ -31,15 +31,15 @@ html, body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack elements vertically for mobile */
     align-items: center;
-    flex-wrap: wrap;
+    text-align: center;
     padding: 20px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 300;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -51,19 +51,23 @@ header {
 
 nav ul {
     display: flex;
+    flex-direction: column; /* Stack navigation links vertically */
     list-style: none;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    align-items: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: 300;
-    padding: 8px 12px;
+    padding: 8px 15px;
     border-radius: 20px;
     transition: all 0.3s ease;
+    width: 90%; /* Full width for better tap targets */
+    text-align: center;
 }
 
 nav a:hover {
@@ -74,59 +78,58 @@ nav a:hover {
 /* Hero Section */
 .hero {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack elements */
     align-items: center;
-    justify-content: center;
     gap: 20px;
-    padding: 60px 0;
+    padding: 20px;
+    text-align: center;
 }
 
 .profile-card {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 8px 32px rgba(0, 120, 215, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 100%;
-    max-width: 350px;
+    width: 90%; /* Full width with some margin */
     text-align: center;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #00ffff;
-    margin: 0 auto 20px;
-    box-shadow: 0 0 20px #00ffff;
+    margin: 0 auto 15px;
+    box-shadow: 0 0 15px #00ffff;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 300;
     margin: 10px 0;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     color: #00ffff;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 }
 
 .social-links {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
 }
 
 .social-links a {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     transition: all 0.3s ease;
 }
 
@@ -136,19 +139,19 @@ h2 {
 }
 
 .btn {
-    display: inline-block;
+    display: block;
     background: linear-gradient(90deg, #00ffff, #0078d7);
     color: white;
-    padding: 12px 25px;
+    padding: 12px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 500;
-    margin: 10px 5px;
+    margin: 10px auto;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
-    max-width: 200px;
+    width: 90%;
+    max-width: 250px;
     text-align: center;
 }
 
@@ -156,50 +159,38 @@ h2 {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
 }
-        /* Responsive Button Sizes */
-@media screen and (max-width: 768px) {
-    .btn {
-        width: 90%; /* Use most of the screen width */
-        max-width: none; /* Remove the max-width on smaller screens */
-        padding: 15px 20px; /* Adjust padding for better touch usability */
-        font-size: 16px; /* Slightly larger text for readability */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .btn {
-        width: 100%; /* Full width for very small screens */
-        padding: 12px 15px; /* Adjust padding for smaller screens */
-        font-size: 14px; /* Smaller text to fit smaller buttons */
-    }
-}
 
 /* Glass Panel */
 .glass-panel {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 8px 32px rgba(0, 120, 215, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 20px;
-    width: 100%;
+    width: 90%;
+    margin: 10px auto;
 }
 
 .skills, .projects {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .projects {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    flex-direction: column; /* Stack projects vertically */
 }
 
 .project {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
     transition: all 0.3s ease;
+    width: 90%;
+    margin: 10px auto;
 }
 
 .project:hover {
@@ -209,7 +200,7 @@ h2 {
 
 footer {
     text-align: center;
-    padding: 30px 0;
+    padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 14px;
     opacity: 0.7;
@@ -232,29 +223,18 @@ footer {
     50% { transform: translateY(-20px); }
 }
 
-/* Media Queries */
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .profile-card {
-        width: 90%;
-    }
-
-    .projects {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+        padding: 15px;
     }
 
     .btn {
-        max-width: 100%; /* Full-width buttons on smaller screens */
+        max-width: none; /* Allow flexible width */
+    }
+
+    .projects {
+        flex-direction: column; /* Stack projects */
     }
 }
 
@@ -264,7 +244,7 @@ footer {
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     h2 {
@@ -272,7 +252,7 @@ footer {
     }
 
     .bubble {
-        display: none; /* Hide decorative bubbles on very small screens */
+        display: none; /* Hide bubbles on very small screens */
     }
 }
     </style>
