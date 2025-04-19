@@ -4,8 +4,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="pfp.png" type="image/png" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danykas</title>
+    <style>
+    /* Fix for mobile screens */
+    @media screen and (max-width: 768px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .hero {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-card {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .glass-panel {
+            padding: 15px;
+        }
+
+        .projects {
+            grid-template-columns: 1fr; /* Single column on smaller screens */
+        }
+
+        .social-links {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .bubble {
+            width: 50px;
+            height: 50px; /* Scale down bubbles on smaller screens */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .logo {
+            font-size: 20px;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
+
+        .skills {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill {
+            margin: 5px 0;
+        }
+
+        .bubble {
+            display: none; /* Hide bubbles on very small screens to avoid clutter */
+        }
+
+        input, textarea {
+            width: 100%; /* Ensure inputs take up full width */
+        }
+
+        button {
+            width: 100%; /* Full-width buttons for better usability */
+        }
+    }
+
+    /* Fix for horizontal scrolling */
+    body {
+        overflow-x: hidden;
+    }
+</style>
     <style>
         @media screen and (max-width: 768px) {
     header {
