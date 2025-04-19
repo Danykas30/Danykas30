@@ -156,6 +156,23 @@ h2 {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
 }
+        /* Responsive Button Sizes */
+@media screen and (max-width: 768px) {
+    .btn {
+        width: 90%; /* Use most of the screen width */
+        max-width: none; /* Remove the max-width on smaller screens */
+        padding: 15px 20px; /* Adjust padding for better touch usability */
+        font-size: 16px; /* Slightly larger text for readability */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .btn {
+        width: 100%; /* Full width for very small screens */
+        padding: 12px 15px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Smaller text to fit smaller buttons */
+    }
+}
 
 /* Glass Panel */
 .glass-panel {
