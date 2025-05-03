@@ -1,0 +1,12 @@
+{
+  "name": "danykas30-profile",
+  "version": "1.0.0",
+  "description": "My personal profile",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.4"
+  }
+}
