@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="pfp.png" type="image/png" />
     <meta charset="UTF-8">
-    <title>Danyk(ass) - Personal profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danyk(ass) | Music Producer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 </head>
-    <h1>NEW WEBSITE COMING SOON</h1>
+<body>
+    <div class="loader">
+        <div class="logo-particle"></div>
+        <div class="loading-text" data-text="LOADING...">LOADING...</div>
+        <div class="audio-wave"></div>
+    </div>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="logo" id="main-logo">DANYK(ASS)</div>
+            <nav class="nav">
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#music" class="nav-link">MUSIC</a>
+                <a href="#videos" class="nav-link">VIDEOS</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+                <a href="https://guns.lol/danyk.ass" target="_blank" class="nav-link special">GUNS.LOL</a>
+            </nav>
+        </header>
+
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">DANYK(ASS)</h1>
+                <p class="hero-subtitle">MUSIC PRODUCER</p>
+                <button class="play-btn" id="play-btn">▶ PLAY DEMO</button>
+            </div>
+        </section>
+
+        <section id="music" class="section">
+            <h2 class="section-title">MUSIC</h2>
+            <div class="music-container">
+                <div class="soundcloud-embed">
+                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" 
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/your-user-id&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                </div>
+                <div class="album-grid">
+                    <!-- Album items will be added dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <section id="videos" class="section">
+            <h2 class="section-title">VIDEOS</h2>
+            <div class="video-container">
+                <div class="featured-video">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/latest-video" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-grid">
+                    <!-- Video items will be added dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="contact-container">
+                <form class="contact-form" id="contact-form">
+                    <input type="text" placeholder="Name" class="form-input">
+                    <input type="email" placeholder="Email" class="form-input">
+                    <textarea placeholder="Message" class="form-input textarea"></textarea>
+                    <button type="submit" class="submit-btn">SEND</button>
+                </form>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@danykassq" target="_blank" class="social-link youtube">YOUTUBE</a>
+                    <a href="https://soundcloud.com/danyk-ass" target="_blank" class="social-link soundcloud">SOUNDCLOUD</a>
+                    <a href="mailto:parko20a@gmail.com" class="social-link email">EMAIL</a>
+                    <a href="https://guns.lol/danyk.ass" target="_blank" class="social-link guns">GUNS.LOL</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2023 DANYK(ASS). ALL RIGHTS RESERVED.</p>
+            <a href="#home" class="back-to-top">↑</a>
+        </footer>
+    </div>
+
+    <audio id="demo-track" src="path/to/demo-track.mp3"></audio>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
