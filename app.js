@@ -331,4 +331,25 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Load dynamic content after page is ready
     setTimeout(loadDynamicContent, 1000);
+});\
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const msgBox = document.getElementById('form-message');
+    msgBox.textContent = 'Sending...';
+    
+    try {
+        const response = await fetch('send_mail.php', {
+            method: 'POST',
+            body: formData,
+        });
+        const result = await response.json();
+        msgBox.textContent = result.message;
+        if (result.success) {
+            form.reset();
+        }
+    } catch (err) {
+        msgBox.textContent = 'An error occurred. Please try again later.';
+    }
 });
