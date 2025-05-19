@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Load dynamic content after page is ready
     setTimeout(loadDynamicContent, 1000);
-});\
+});
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = e.target;
