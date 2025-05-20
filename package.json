@@ -1,6 +1,7 @@
 {
   "name": "danykas30-profile",
   "version": "1.0.0",
+  "type": "module",
   "description": "My personal profile",
   "main": "index.js",
   "scripts": {
