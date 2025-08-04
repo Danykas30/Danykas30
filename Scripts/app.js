@@ -255,14 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Dynamic content loading (example - you would replace with actual data)
     function loadDynamicContent() {
         // Example album data
         const albums = [
-            { title: "SICK BEATS", date: "2023", cover: "https://via.placeholder.com/300x300" },
-            { title: "DARK WAVES", date: "2022", cover: "https://via.placeholder.com/300x300" },
-            { title: "NEON DREAMS", date: "2021", cover: "https://via.placeholder.com/300x300" },
-            { title: "GLITCH HOP", date: "2020", cover: "https://via.placeholder.com/300x300" }
+            { title: "thiS", date: "2025", cover: "https://i1.sndcdn.com/artworks-30EC3Wd7KVd02yIO-DUFj7g-t300x300.jpg" },
+            { title: "autisim shi", date: "2025", cover: "https://i1.sndcdn.com/artworks-yisn4bngPWLL0CbJ-cvZLoQ-t300x300.png" },
         ];
         
         const albumGrid = document.querySelector('.album-grid');
