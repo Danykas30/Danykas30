@@ -293,10 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Example video data
         const videos = [
-            { title: "LIVE SET 2023", thumb: "https://via.placeholder.com/300x200" },
-            { title: "BEHIND THE SCENES", thumb: "https://via.placeholder.com/300x200" },
-            { title: "STUDIO SESSION", thumb: "https://via.placeholder.com/300x200" },
-            { title: "INTERVIEW", thumb: "https://via.placeholder.com/300x200" }
+            { title: "thiS full album", thumb: "https://i1.sndcdn.com/artworks-30EC3Wd7KVd02yIO-DUFj7g-t300x300.jpg" },
         ];
         
         const videoGrid = document.querySelector('.video-grid');
